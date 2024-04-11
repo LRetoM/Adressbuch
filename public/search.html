@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suche im Adressbuch</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body id="searchPageContainer">
+    <button onclick="window.location.href='http://localhost:3000/';">Zurück</button>
+    <h1>Suche im Adressbuch</h1>
+    <form id="searchForm">
+        <input type="text" id="first_name" name="first_name" placeholder="Vorname">
+        <input type="text" id="last_name" name="last_name" placeholder="Nachname">
+        <input type="text" id="city" name="city" placeholder="Stadt">
+        <input type="text" id="street" name="street" placeholder="Straße">
+        <input type="text" id="house_number" name="house_number" placeholder="Hausnummer">
+        <input type="text" id="phone_number" name="phone_number" placeholder="Telefonnummer">
+        <button type="submit">Suchen</button>
+    </form>
+
+    <!-- Hier wird das Ergebnis der Suche angezeigt -->
+    <div id="searchResults">
+        <!-- Hier werden die Suchergebnisse in einer Tabelle angezeigt -->
+    </div>
+
+    <!-- Fügen Sie hier Ihren JavaScript-Code ein -->
+    <script src="search.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktliste</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body id="indexPageContainer">
+    
+    <table id="contactsTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Vorname</th>
+                <th>Nachname</th>
+                <th>Ort</th>
+                <th>Strasse</th>
+                <th>Hausnummer</th>
+                <th>Telefonnummer</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Die Kontakte werden hier per JavaScript eingefügt -->
+        </tbody>
+    </table>
+    
+    <h2>Neuen Kontakt hinzufügen</h2>
+    <form id="newContactForm">
+        <label for="first_name">Vorname:</label>
+<input type="text" id="first_name" name="first_name" required pattern="[a-zA-ZäöüÄÖÜß ]+" title="Bitte geben Sie einen gültigen Vornamen ein. Nur Buchstaben und Leerzeichen sind erlaubt."><br>
+
+<label for="last_name">Nachname:</label>
+<input type="text" id="last_name" name="last_name" required pattern="[a-zA-ZäöüÄÖÜß ]+" title="Bitte geben Sie einen gültigen Nachnamen ein. Nur Buchstaben und Leerzeichen sind erlaubt."><br>
+
+<label for="city">Stadt:</label>
+<input type="text" id="city" name="city" required pattern="[a-zA-ZäöüÄÖÜß ]+" title="Bitte geben Sie einen gültigen Stadtnamen ein. Nur Buchstaben und Leerzeichen sind erlaubt."><br>
+
+<label for="street">Straße:</label>
+<input type="text" id="street" name="street" required pattern="[a-zA-ZäöüÄÖÜß ]+" title="Bitte geben Sie einen gültigen Straßennamen ein. Nur Buchstaben und Leerzeichen sind erlaubt."><br>
+
+<label for="house_number">Hausnummer:</label>
+<input type="text" id="house_number" name="house_number" required pattern="\d+[a-zA-Z]*" title="Bitte geben Sie eine gültige Hausnummer ein. Nur Zahlen sind erlaubt, und optionale Buchstaben können angehängt werden."><br>
+
+<label for="phone_number">Telefonnummer:</label>
+<input type="text" id="phone_number" name="phone_number" required pattern="\d+" title="Bitte geben Sie eine gültige Telefonnummer ein. Nur Zahlen sind erlaubt."><br>
+
+<input type="submit" value="Hinzufügen">
+
+    </form>
+    <div id="message" class="hidden"></div>
+    <form action="./contacts.html" method="get">
+        <button type="submit">Kontaktliste anzeigen</button>
+    </form>
+
+    <form action="./search.html" method="get">
+        <button type="submit">Suchen</button>
+    </form>
+    <script src="./index.js">
+
+    </script>
+</body>
+</html>
