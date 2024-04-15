@@ -1,10 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     var _a;
     function addContactToTable(contact) {
-        var _a;
-        var tableBody = (_a = document.getElementById('contactsTable')) === null || _a === void 0 ? void 0 : _a.getElementsByTagName('tbody')[0];
-        if (!tableBody)
-            return; // Abbrechen, wenn tableBody null ist
+        var tableBody = document.getElementById('contactsTable').getElementsByTagName('tbody')[0];
         var row = document.createElement('tr');
         row.innerHTML = "\n            <td>".concat(contact.id, "</td>\n            <td contenteditable=\"true\" data-field=\"first_name\">").concat(contact.first_name, "</td>\n            <td contenteditable=\"true\" data-field=\"last_name\">").concat(contact.last_name, "</td>\n            <td contenteditable=\"true\" data-field=\"city\">").concat(contact.city, "</td>\n            <td contenteditable=\"true\" data-field=\"street\">").concat(contact.street, "</td>\n            <td contenteditable=\"true\" data-field=\"house_number\">").concat(contact.house_number, "</td>\n            <td contenteditable=\"true\" data-field=\"phone_number\">").concat(contact.phone_number, "</td>\n            <td>\n                <button class=\"saveEdit\" data-id=\"").concat(contact.id, "\">Speichern</button>\n                <button class=\"deleteContact\" data-id=\"").concat(contact.id, "\">L\u00F6schen</button>\n            </td>\n        ");
         tableBody.appendChild(row);
